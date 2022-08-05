@@ -7,11 +7,9 @@ body {
   .jumbotron {
     background-image: url('../images/bacteriacells4.jpg');
     background-size: 100% 100%;
-    opacity: 0.7;
+    opacity: 0.9;
     text-align: center;
-    color: green;
-    /* text-shadow: 3px 3px 8px whitesmoke; */
-    
+    color: white;
   } 
 
   .well {
@@ -19,9 +17,7 @@ background-color: aliceblue;
 font-family: Verdana;
 font-weight: 90;
 font-size: smaller;
-
-
-  }
+ }
 
   .panel {
     background-color: aliceblue;
@@ -29,7 +25,6 @@ font-size: smaller;
     font-weight: 90;
     
       }
-
 
 #info {
   font-family: Verdana;
@@ -42,51 +37,7 @@ font-size: smaller;
   font-family: Verdana;
   font-weight: 90;
   font-size: medium;
-  background-color: whitesmoke; body {
-
-    color: black;
-    font-family: Verdana;
-  }
-
-  .jumbotron {
-    background-image: url('../images/bacteriacells3.jpg');
-    background-size: 100% 100%;
-    opacity: 0.7;
-    text-align: center;
-    color: aliceblue;
-    /* text-shadow: 3px 3px 8px whitesmoke; */
-    
-  } 
-
-  .well {
-background-color: aliceblue;
-font-family: Verdana;
-font-weight: 90;
-font-size: smaller;
-
-
-  }
-
-  .panel {
-    background-color: aliceblue;
-    font-family: Verdana;
-    font-weight: 90;
-    
-      }
-
-
-#info {
-  font-family: Verdana;
-  font-weight: 90;
-  font-size: medium;
-  background-color: whitesmoke;
-}
-
-#def {
-  font-family: Verdana;
-  font-weight: 90;
-  font-size: medium;
-  background-color: whitesmoke;
+  background-color: whitesmoke; 
 }
 
 #inside {
@@ -94,5 +45,4 @@ font-size: smaller;
   font-weight: 90;
   font-size: medium;
   background-color: whitesmoke;
-}
-}
+  }
