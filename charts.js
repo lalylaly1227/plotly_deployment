@@ -152,25 +152,60 @@ d3.json("samples.json").then((data) => {
   console.log(wFreqFloat)
 
   // 4. Create the trace for the gauge chart.
-  var gaugeData = [{
-    title: {text: "Scrubs per Week", font: {size: 18}},
-    type: "indicator",
-    mode: "gauge+number",
-    value: wFreq,
-    tickmode: 'linear',
-    gauge: {
-      axis: { range: [null, 10], dtick: 2, tick0: 0 },
-      bar: { color: "firebrick" },
-      bgcolor: "white",
-      borderwidth: 2,
-      bordercolor: "gray",
-      steps: [
-        { range: [0, 2], color: "floralwhite"},
-        { range: [2, 4], color: "lavender"},
-        { range: [4, 6], color: "thistle"},
-        { range: [6, 8], color: "mediumslateblue" },
-        { range: [8, 10], color: "royalblue" },
-      ]},
+  // var gaugeData = [{
+  //   title: {text: "Scrubs per Week", font: {size: 18}},
+  //   type: "indicator",
+  //   mode: "gauge+number",
+  //   value: wFreq,
+  //   tickmode: 'linear',
+  //   gauge: {
+  //     axis: { range: [null, 10], dtick: 2, tick0: 0 },
+  //     bar: { color: "firebrick" },
+  //     bgcolor: "white",
+  //     borderwidth: 2,
+  //     bordercolor: "gray",
+  //     steps: [
+  //       { range: [0, 2], color: "floralwhite"},
+  //       { range: [2, 4], color: "lavender"},
+  //       { range: [4, 6], color: "thistle"},
+  //       { range: [6, 8], color: "mediumslateblue" },
+  //       { range: [8, 10], color: "royalblue" },
+  //     ]},
+  var data = [
+    {
+      type: "indicator",
+      mode: "gauge+number+delta",
+      value: 420,
+      title: { text: "Speed", font: { size: 24 } },
+      delta: { reference: 400, increasing: { color: "RebeccaPurple" } },
+      gauge: {
+        axis: { range: [null, 500], tickwidth: 1, tickcolor: "darkblue" },
+        bar: { color: "darkblue" },
+        bgcolor: "white",
+        borderwidth: 2,
+        bordercolor: "gray",
+        steps: [
+          { range: [0, 250], color: "cyan" },
+          { range: [250, 400], color: "royalblue" }
+        ],
+        threshold: {
+          line: { color: "red", width: 4 },
+          thickness: 0.75,
+          value: 490
+        }
+      }
+    }
+  ];
+  
+  var layout = {
+    width: 500,
+    height: 400,
+    margin: { t: 25, r: 25, l: 25, b: 25 },
+    paper_bgcolor: "lavender",
+    font: { color: "darkblue", family: "Arial" }
+  };
+  
+  Plotly.newPlot('myDiv', data, layout);
       
   }];
   // 5. Create the layout for the gauge chart.
