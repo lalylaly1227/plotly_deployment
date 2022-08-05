@@ -93,7 +93,7 @@ d3.json("samples.json").then((data) => {
     type: "bar",
     orientation: 'h',
     marker: {
-      color: 'rgb(158,202,225)',
+      color: 'rgb(0, 150, 255)',
       opacity: 0.8,}
   }];
   
